@@ -132,6 +132,6 @@ void survey_adc2_channel_IN8(void)//опрос ADC2 канала IN8
 	rawVoltage_adc2_IN8 = (float) adc2[5] * 3.3 * 2 / 4095;
 	current_adc2_IN8 = (rawVoltage_adc2_IN8 - 2.5)/sensitivity;
 	snprintf(trans_str, 63, "CURRENT %f\n", current_adc2_IN8);
-	uint16_t current_buffer_IN8 [0] = current_adc2_IN8; 
+	uint16_t current_buffer_IN8 [0] = current_adc2_IN8; //буфер
 }
 
